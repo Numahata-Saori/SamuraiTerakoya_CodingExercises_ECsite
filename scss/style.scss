@@ -1,0 +1,270 @@
+// レスポンシブ用
+$breakpoints: (
+  "tb": "screen and (max-width: 1200px)",
+  "tb-s": "screen and (max-width: 900px)",
+  "sm-x": "screen and (max-width: 600px)",
+  "sm": "screen and (max-width: 480px)",
+  "sm-s": "screen and (max-width: 340px)",
+);
+@mixin bq($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+html {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+
+  font-size: 20px;
+}
+html {
+  @include bq(tb) {
+    font-size: 16px;
+  }
+  @include bq(tb-s) {
+    font-size: 14px;
+  }
+  @include bq(sm-x) {
+    font-size: 12px;
+  }
+  @include bq(sm) {
+    font-size: 10px;
+  }
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+a {
+  // 下線を非表示
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  // width: 100%;
+  // height: auto;
+}
+
+header {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border-bottom: solid 1px #C3C3C3;
+
+  .site-title {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+
+    padding: 16px 0;
+    flex-shrink: 0;
+
+    img {
+      height: 18px;
+    }
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    line-height: 18px;
+    font-size: 12px;
+
+    @include bq(tb-s) {
+      flex-direction: column;
+    }
+
+    .list-menu {
+      display: flex;
+
+      @include bq(tb-s) {
+        justify-content: center;
+      }
+    }
+
+    .login-menu {
+      display: flex;
+
+      @include bq(tb-s) {
+        justify-content: center;
+      }
+    }
+
+    li {
+      padding-right: 14px;
+
+      // font-size: 12px;
+      a {
+        color: #333333;
+      }
+    }
+  }
+}
+
+main {
+  #item {
+    display: flex;
+    justify-content: center;
+
+    @include bq(tb-s) {
+      flex-direction: column;
+    }
+
+    .main-img {
+      width: 50%;
+      @include bq(tb-s) {
+        width: 100%;
+      }
+      img {
+        width: 100%;
+      }
+    }
+
+    .main-section {
+      width: 42.5%;
+      margin-left: 7.5%;
+
+      @include bq(tb-s) {
+        width: 100%;
+        margin: 0;
+        padding: 10px 20px 0 20px ;
+      }
+
+      h1 {
+        line-height: 24px;
+        font-size: 16px;
+
+        padding: 18px 0;
+
+        border-top: solid 1px #C3C3C3;
+        border-bottom: solid 1px #C3C3C3;
+      }
+
+      p {
+        font-size: 12px;
+      }
+
+      .lead {
+        padding: 20px 0;
+      }
+
+      .price {
+        padding: 10px 0;
+      }
+
+      table {
+        // セルの隙間をなくす
+        border-collapse: collapse;
+      }
+
+      .select-table {
+        margin: 20px 0;
+        width: 100%;
+
+        thead {
+          .color {
+            width: 20%;
+          }
+          .size {
+            width: 20%;
+          }
+          .quantity {
+            width: 60%;
+          }
+        }
+
+        th, td {
+          font-size: 12px;
+          padding: 10px 10px;
+          border-top: solid 1px #C3C3C3;
+          border-left: solid 1px #C3C3C3;
+        }
+        td:first-child, th:first-child {
+          border-left: none;
+        }
+        thead {
+          tr:first-child td, tr:first-child th {
+            border-top:none;
+          }
+        }
+
+        tbody {
+          select {
+            border: solid 1px #C3C3C3;
+            width: 100%;
+            padding: 0 10px;
+
+            // リセットCSSを戻す
+            -moz-appearance: menulist;
+            -webkit-appearance: menulist;
+          }
+        }
+      }
+
+      .buy-btn {
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 18px 0;
+
+        background-color: #4B4B4B;
+        color: #FFFFFF;
+
+        font-size: 12px;
+      }
+
+      .size-table {
+        margin-top: 30px;
+        width: 100%;
+
+        .size {
+          width: 16%;
+        }
+        .chest, .weist, .height {
+          width: 28%;
+        }
+        th, td {
+          font-size: 12px;
+          padding: 10px 10px;
+          text-align: center;
+          border-top: solid 1px #C3C3C3;
+          border-left: solid 1px #C3C3C3;
+        }
+        th:last-child, td:last-child {
+          border-right: solid 1px #C3C3C3;
+        }
+        tbody {
+          tr:last-child td {
+            border-bottom: solid 1px #C3C3C3;
+          }
+          td:first-child {
+            background-color: #ECEBEB;
+          }
+        }
+        thead {
+          background-color: #ECEBEB;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  margin-top: 100px;
+  #copyright {
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
+
+    line-height: 15px;
+    font-size: 10px;
+  }
+}

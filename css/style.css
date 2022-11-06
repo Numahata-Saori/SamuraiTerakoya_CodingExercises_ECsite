@@ -1,0 +1,222 @@
+html {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border-bottom: solid 1px #C3C3C3;
+}
+header .site-title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 16px 0;
+  flex-shrink: 0;
+}
+header .site-title img {
+  height: 18px;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  line-height: 18px;
+  font-size: 12px;
+}
+@media screen and (max-width: 900px) {
+  header nav {
+    flex-direction: column;
+  }
+}
+header nav .list-menu {
+  display: flex;
+}
+@media screen and (max-width: 900px) {
+  header nav .list-menu {
+    justify-content: center;
+  }
+}
+header nav .login-menu {
+  display: flex;
+}
+@media screen and (max-width: 900px) {
+  header nav .login-menu {
+    justify-content: center;
+  }
+}
+header nav li {
+  padding-right: 14px;
+}
+header nav li a {
+  color: #333333;
+}
+
+main #item {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 900px) {
+  main #item {
+    flex-direction: column;
+  }
+}
+main #item .main-img {
+  width: 50%;
+}
+@media screen and (max-width: 900px) {
+  main #item .main-img {
+    width: 100%;
+  }
+}
+main #item .main-img img {
+  width: 100%;
+}
+main #item .main-section {
+  width: 42.5%;
+  margin-left: 7.5%;
+}
+@media screen and (max-width: 900px) {
+  main #item .main-section {
+    width: 100%;
+    margin: 0;
+    padding: 10px 20px 0 20px;
+  }
+}
+main #item .main-section h1 {
+  line-height: 24px;
+  font-size: 16px;
+  padding: 18px 0;
+  border-top: solid 1px #C3C3C3;
+  border-bottom: solid 1px #C3C3C3;
+}
+main #item .main-section p {
+  font-size: 12px;
+}
+main #item .main-section .lead {
+  padding: 20px 0;
+}
+main #item .main-section .price {
+  padding: 10px 0;
+}
+main #item .main-section table {
+  border-collapse: collapse;
+}
+main #item .main-section .select-table {
+  margin: 20px 0;
+  width: 100%;
+}
+main #item .main-section .select-table thead .color {
+  width: 20%;
+}
+main #item .main-section .select-table thead .size {
+  width: 20%;
+}
+main #item .main-section .select-table thead .quantity {
+  width: 60%;
+}
+main #item .main-section .select-table th, main #item .main-section .select-table td {
+  font-size: 12px;
+  padding: 10px 10px;
+  border-top: solid 1px #C3C3C3;
+  border-left: solid 1px #C3C3C3;
+}
+main #item .main-section .select-table td:first-child, main #item .main-section .select-table th:first-child {
+  border-left: none;
+}
+main #item .main-section .select-table thead tr:first-child td, main #item .main-section .select-table thead tr:first-child th {
+  border-top: none;
+}
+main #item .main-section .select-table tbody select {
+  border: solid 1px #C3C3C3;
+  width: 100%;
+  padding: 0 10px;
+  -moz-appearance: menulist;
+  -webkit-appearance: menulist;
+}
+main #item .main-section .buy-btn {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 18px 0;
+  background-color: #4B4B4B;
+  color: #FFFFFF;
+  font-size: 12px;
+}
+main #item .main-section .size-table {
+  margin-top: 30px;
+  width: 100%;
+}
+main #item .main-section .size-table .size {
+  width: 16%;
+}
+main #item .main-section .size-table .chest, main #item .main-section .size-table .weist, main #item .main-section .size-table .height {
+  width: 28%;
+}
+main #item .main-section .size-table th, main #item .main-section .size-table td {
+  font-size: 12px;
+  padding: 10px 10px;
+  text-align: center;
+  border-top: solid 1px #C3C3C3;
+  border-left: solid 1px #C3C3C3;
+}
+main #item .main-section .size-table th:last-child, main #item .main-section .size-table td:last-child {
+  border-right: solid 1px #C3C3C3;
+}
+main #item .main-section .size-table tbody tr:last-child td {
+  border-bottom: solid 1px #C3C3C3;
+}
+main #item .main-section .size-table tbody td:first-child {
+  background-color: #ECEBEB;
+}
+main #item .main-section .size-table thead {
+  background-color: #ECEBEB;
+}
+
+footer {
+  margin-top: 100px;
+}
+footer #copyright {
+  display: block;
+  text-align: center;
+  padding-bottom: 10px;
+  line-height: 15px;
+  font-size: 10px;
+}
